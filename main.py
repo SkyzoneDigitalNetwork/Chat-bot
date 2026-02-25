@@ -22,7 +22,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         # Groq API call
         completion = client.chat.completions.create(
-            model="llama3-70b-8192", # কোডিংয়ের জন্য এই মডেলটি সেরা
+            model="llama-3.3-70b-versatile", # কোডিংয়ের জন্য এই মডেলটি সেরা
             messages=[
                 {"role": "system", "content": "You are an expert programmer. Provide clean, efficient code and explanations."},
                 {"role": "user", "content": user_prompt}
